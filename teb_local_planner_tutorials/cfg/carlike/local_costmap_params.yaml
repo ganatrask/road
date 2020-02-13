@@ -1,0 +1,18 @@
+local_costmap:
+  global_frame: map
+  robot_base_frame: base_link
+  update_frequency: 5.0
+  publish_frequency: 2.0
+  static_map: false
+  rolling_window: true
+  width: 5.5
+  height: 5.5
+  resolution: 0.1
+  transform_tolerance: 0.5
+
+  plugins:
+ #  - {name: road_layer,          type: "road_layer_namespace::RoadLayer"}
+   - {name: simple_layer,        type: "simple_layer_namespace::SimpleLayer"}
+ #  - {name: prohibition_layer,   type: "costmap_prohibition_layer_namespace::CostmapProhibitionLayer"}
+   - {name: static_layer,        type: "costmap_2d::StaticLayer"}
+   - {name: obstacle_layer,      type: "costmap_2d::ObstacleLayer"}

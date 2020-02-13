@@ -1,0 +1,5 @@
+<library path="lib/libroad_layer">
+  <class type="road_layer_namespace::RoadLayer" base_class_type="costmap_2d::Layer">
+    <description>Demo Layer that adds a pointcloud of road in front of the robot</description>
+  </class>
+</library>

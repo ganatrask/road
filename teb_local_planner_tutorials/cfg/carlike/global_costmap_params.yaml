@@ -1,0 +1,18 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: base_link
+  update_frequency: 1.0
+  publish_frequency: 0.5
+  static_map: true
+  
+#prohibition_areas:
+#  - [6.085, 3.995]
+#  - [[6.050, 7.029],[5.769, 7.944]]
+#  - [[1.048, 0.988],[1.493, 1.520],[1.556, 0.396],[2.000,1.000]]  
+  plugins:
+ #   - {name: road_layer,              type: "road_layer_namespace::RoadLayer"}
+    - {name: simple_layer,            type: "simple_layer_namespace::SimpleLayer"}
+ #   - {name: prohibition_layer,       type: "costmap_prohibition_layer_namespace::CostmapProhibitionLayer"}
+    - {name: static_layer,            type: "costmap_2d::StaticLayer"}
+    - {name: obstacle_layer,          type: "costmap_2d::VoxelLayer"}
+    - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}
